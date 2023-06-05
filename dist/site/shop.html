@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    
+    
+
+  <script type="module" crossorigin src="/assets/shop-f049f0ab.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/axiosClient-bd54c5dc.js">
+  <link rel="modulepreload" crossorigin href="/assets/helper-06e4e79d.js">
+  <link rel="modulepreload" crossorigin href="/assets/main-0ae8c9b5.js">
+  <link rel="stylesheet" href="/assets/axiosClient-281be745.css">
+  <link rel="stylesheet" href="/assets/main-07370d5f.css">
+  <link rel="stylesheet" href="/assets/shop-34b29ac2.css">
+  <link rel="stylesheet" href="/assets/ck-content-50977ec5.css">
+</head>
+
+<body>
+
+    <div id="main" class="container mx-auto xl:px-20">
+        <!-- Header section -->
+        <div id="top-header">
+
+        </div>
+        <div id="header">
+
+        </div>
+
+        <!-- Shop content -->
+
+
+        <div id="shop-content" class="shop-content flex mt-8">
+            <div class="shop-content__sidebar w-1/4">
+
+                <div action="#" method="get" id="shop-content__filter-bar"
+                    class="w-full h-40rem max-w-xs p-4 overflow-y-auto bg-white dark:bg-gray-800 border shadow">
+                    <h5 id="drawer-label"
+                        class="inline-flex items-center mb-4 text-base font-semibold text-gray-500 uppercase dark:text-gray-400">
+                        Apply filters
+                    </h5>
+                    <button type="button" data-drawer-dismiss="shop-content__filter-bar" aria-controls="drawer-example"
+                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white">
+                        <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="sr-only">Close menu</span>
+                    </button>
+
+                    <div class="flex flex-col justify-between flex-1">
+                        <div class="space-y-6">
+                            <!-- Categories -->
+                            <div class="space-y-2" id="cate-list">
+
+                                <h6 class="text-base font-medium text-black dark:text-white">
+                                    Categories
+                                </h6>
+
+                                <!-- <a href="#"
+                                    class="flex items-center text-sm font-medium text-primary-600 dark:text-primary-500 hover:underline">
+                                    View all
+                                </a> -->
+                            </div>
+
+                            <!-- Prices -->
+                            <div class="space-y-2">
+                                <h6 class="text-base font-medium text-black dark:text-white">
+                                    Prices
+                                </h6>
+                                <div class="flex items-center justify-between col-span-2 space-x-3">
+                                    <div class="w-full">
+                                        <label for="min-experience-input"
+                                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                                            From
+                                        </label>
+
+                                        <input type="number" id="price-from" value="300" min="1" max="10000"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:bg-slate-600 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:bg-slate-600 dark:focus:border-primary-500"
+                                            placeholder="" required>
+                                    </div>
+
+                                    <div class="w-full">
+                                        <label for="price-to"
+                                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                                            To
+                                        </label>
+
+                                        <input type="number" id="price-to" value="3500" min="1" max="10000"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:bg-slate-600 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:bg-slate-600 dark:focus:border-primary-500"
+                                            placeholder="" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Rating -->
+                            <!-- <div class="space-y-2">
+                                <h6 class="text-base font-medium text-black dark:text-white">
+                                    Rating
+                                </h6>
+
+                                <div class="flex items-center">
+                                    <input id="five-stars" type="radio" value="" name="rating"
+                                        class="w-4 h-4 bg-gray-100 border-gray-300 text-primary-600 focus:bg-slate-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="five-stars" class="flex items-center ml-2">
+                                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
+                                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <title>First star</title>
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
+                                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <title>Second star</title>
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
+                                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <title>Third star</title>
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
+                                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <title>Fourth star</title>
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
+                                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <title>Fifth star</title>
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                    </label>
+                                </div>
+
+                                <div class="flex items-center">
+                                    <input id="four-stars" type="radio" value="" name="rating"
+                                        class="w-4 h-4 bg-gray-100 border-gray-300 text-primary-600 focus:bg-slate-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="four-stars" class="flex items-center ml-2">
+                                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
+                                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <title>First star</title>
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
+                                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <title>Second star</title>
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
+                                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <title>Third star</title>
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
+                                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <title>Fourth star</title>
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" class="w-5 h-5 text-gray-300 dark:text-gray-500"
+                                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <title>Fifth star</title>
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                    </label>
+                                </div>
+
+                                <div class="flex items-center">
+                                    <input id="three-stars" type="radio" value="" name="rating" checked
+                                        class="w-4 h-4 bg-gray-100 border-gray-300 text-primary-600 focus:bg-slate-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="three-stars" class="flex items-center ml-2">
+                                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
+                                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <title>First star</title>
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
+                                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <title>Second star</title>
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
+                                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <title>Third star</title>
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" class="w-5 h-5 text-gray-300 dark:text-gray-500"
+                                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <title>Fourth star</title>
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" class="w-5 h-5 text-gray-300 dark:text-gray-500"
+                                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <title>Fifth star</title>
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                    </label>
+                                </div>
+
+                                <div class="flex items-center">
+                                    <input id="two-stars" type="radio" value="" name="rating"
+                                        class="w-4 h-4 bg-gray-100 border-gray-300 text-primary-600 focus:bg-slate-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="two-stars" class="flex items-center ml-2">
+                                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
+                                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <title>First star</title>
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
+                                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <title>Second star</title>
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" class="w-5 h-5 text-gray-300 dark:text-gray-500"
+                                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <title>Third star</title>
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" class="w-5 h-5 text-gray-300 dark:text-gray-500"
+                                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <title>Fourth star</title>
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" class="w-5 h-5 text-gray-300 dark:text-gray-500"
+                                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <title>Fifth star</title>
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                    </label>
+                                </div>
+
+                                <div class="flex items-center">
+                                    <input id="one-star" type="radio" value="" name="rating"
+                                        class="w-4 h-4 bg-gray-100 border-gray-300 text-primary-600 focus:bg-slate-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="one-star" class="flex items-center ml-2">
+                                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
+                                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <title>First star</title>
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" class="w-5 h-5 text-gray-300 dark:text-gray-500"
+                                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <title>Second star</title>
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" class="w-5 h-5 text-gray-300 dark:text-gray-500"
+                                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <title>Third star</title>
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" class="w-5 h-5 text-gray-300 dark:text-gray-500"
+                                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <title>Fourth star</title>
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg aria-hidden="true" class="w-5 h-5 text-gray-300 dark:text-gray-500"
+                                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <title>Fifth star</title>
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                    </label>
+                                </div>
+                            </div> -->
+
+                        </div>
+
+                        <div class="bottom-0 left-0 flex justify-center w-full pb-4 mt-6 space-x-4 md:px-4 ">
+                            <button id="apply-filter-btn" type="submit"
+                                class="w-full px-5 py-2 text-sm font-medium text-center text-white rounded-lg bg-slate-600 hover:bg-slate-600-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-slate-600 dark:hover:bg-slate-600-800 dark:focus:ring-primary-800">
+                                Apply filters
+                            </button>
+                            <button id="reset-filter-btn" type="reset"
+                                class="w-full px-5 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+                                Clear all
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Flex 70% content shop-->
+            <div class="shop-content__products-collection w-3/4">
+                <!-- Search bar and sort-->
+
+                <div class="flex p-4 justify-between">
+
+                    <div class="w-2/3">
+
+                        <div class="relative mb-4 flex w-full flex-wrap items-stretch">
+                            <input type="search" id="searchInput"
+                                class="relative m-0 -mr-0.5 block w-[1px] min-w-0 flex-auto rounded-l border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
+                                placeholder="Search" aria-label="Search" aria-describedby="button-addon1" />
+
+                            <!--Search button-->
+                            <button id="search-btn"
+                                class="relative z-[2] flex items-center rounded-r bg-slate-600 px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-slate-600 hover:shadow-lg focus:bg-slate-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-slate-600-800 active:shadow-lg"
+                                type="button" id="button-addon1" data-te-ripple-init data-te-ripple-color="light">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                    class="h-5 w-5">
+                                    <path fill-rule="evenodd"
+                                        d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="relative w-1/3" data-te-dropdown-ref>
+                        <button
+                            class="ml-auto flex items-center whitespace-nowrap rounded bg-slate-600 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[slate-500] transition duration-150 ease-in-out hover:bg-slate-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-slate-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-slate-600 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] motion-reduce:transition-none dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                            type="button" id="dropdownMenuButton1" data-te-dropdown-toggle-ref aria-expanded="false"
+                            data-te-ripple-init data-te-ripple-color="light">
+                            Lọc sản phẩm
+                            <span class="ml-2 w-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                    class="h-5 w-5">
+                                    <path fill-rule="evenodd"
+                                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                        </button>
+                        <ul id="sortBarEl"
+                            class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"
+                            aria-labelledby="dropdownMenuButton1" data-te-dropdown-menu-ref>
+                            <li>
+                                <a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+                                    href="#" data-sort="latest" data-te-dropdown-item-ref>Mới nhất</a>
+                            </li>
+                            <li>
+                                <a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+                                    href="#" data-sort="oldest" data-te-dropdown-item-ref>Cũ nhất</a>
+                            </li>
+                            <li>
+                                <a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+                                    href="#" data-sort="priceasc" data-te-dropdown-item-ref>Giá tăng dần</a>
+                            </li>
+                            <li>
+                                <a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+                                    href="#" data-sort="pricedesc" data-te-dropdown-item-ref>Giá giảm giần</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="show-result-text" class="px-4 mb-3 hidden">
+                    <p><i class="fa-regular fa-lightbulb"></i> Kết quả tìm cho từ khóa: '<span id="keyword"
+                            class="text-orange-500">Oppo</span>'</p>
+                </div>
+
+                <div class="flex px-4">
+                    <p class="me-10 hidden show-result-text__by-cate">Trong danh mục: <i class="fa-solid fa-check"></i>
+                        Oppo
+                        <i class="fa-solid fa-check"></i> Samsung
+                    </p>
+
+                    <p class="me-10 hidden show-result-text__by-sort">Lọc sản phẩm: <i
+                            class="fa-solid fa-filter-circle-xmark"></i> Giá tăng dần</p>
+                    <p class="me-10 hidden show-result-text__by-range">Theo giá từ: $200 -> $1000</p>
+                </div>
+
+                <!-- Full product collections -->
+                <div class="shop-content__products-display">
+                    <section class="text-gray-600 body-font">
+                        <div class="container px-5 pb-4 mx-auto mt-4">
+                            <div id="product-list" class="flex flex-wrap -m-4">
+                                <!-- Single products!!! -->
+                                <div class="lg:w-1/3 md:w-1/2 p-4 w-full card-product">
+                                    <a href="detail-product.html"
+                                        class="group relative block overflow-hidden border pt-2 card-product__link">
+                                        <button
+                                            class="card-product__wishlist absolute end-4 top-4 z-4 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75">
+                                            <span class="sr-only">Wishlist</span>
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                            </svg>
+                                        </button>
+
+                                        <div>
+                                            <img src="https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/s/a/samsung-galaxy-tab-a7-lite-gray-600x600.jpg"
+                                                alt=""
+                                                class="h-64 w-full transition duration-500 group-hover:scale-105 sm:h-72 xl:px-4 md:px-2" />
+
+                                        </div>
+                                        <div class="relative border border-gray-100 bg-white p-6">
+                                            <span
+                                                class="whitespace-nowrap bg-slate-300 px-3 py-1.5 text-xs font-medium">
+                                                New
+                                            </span>
+
+                                            <h3 class="mt-4 card-product__title text-lg font-medium text-gray-900">
+                                                Xiaomi
+                                                Redmi Note 12 Pro 5G Redmi
+                                            </h3>
+
+                                            <div class="flex items-center">
+                                                <p class="mt-1.5 text-xl text-red-500 ">$14.99</p>
+                                                <p class="mt-1.5 text-sm text-gray-700 ms-2 line-through ">$14.99</p>
+                                            </div>
+
+                                            <!-- Rating here -->
+                                            <ul class="flex justify-center mt-2">
+                                                <li>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        fill="currentColor" class="mr-1 h-5 w-5 text-warning">
+                                                        <path fill-rule="evenodd"
+                                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </li>
+                                                <li>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        fill="currentColor" class="mr-1 h-5 w-5 text-warning">
+                                                        <path fill-rule="evenodd"
+                                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </li>
+                                                <li>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        fill="currentColor" class="mr-1 h-5 w-5 text-warning">
+                                                        <path fill-rule="evenodd"
+                                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </li>
+                                                <li>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="mr-1 h-5 w-5 text-warning">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                                                    </svg>
+                                                </li>
+                                                <li>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="mr-1 h-5 w-5 text-warning">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                                                    </svg>
+                                                </li>
+                                            </ul>
+
+                                            <form class="mt-4">
+                                                <button
+                                                    class="block w-full rounded bg-slate-300 p-4 text-sm font-medium transition hover:scale-105">
+                                                    Add to Cart
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="lg:w-1/3 md:w-1/2 p-4 w-full">
+                                    <a href="detail-product.html"
+                                        class="h-full group relative block overflow-hidden border pt-2">
+                                        <button
+                                            class="absolute end-4 top-4 z-4 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75">
+                                            <span class="sr-only">Wishlist</span>
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                            </svg>
+                                        </button>
+
+                                        <div>
+                                            <img src="https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/f/d/fdeen_1_.jpg"
+                                                alt=""
+                                                class="h-64 w-full transition duration-500 group-hover:scale-105 sm:h-72 xl:px-4 md:px-2" />
+
+                                        </div>
+                                        <div class="relative border border-gray-100 bg-white p-6">
+                                            <span
+                                                class="whitespace-nowrap bg-slate-300 px-3 py-1.5 text-xs font-medium">
+                                                New
+                                            </span>
+
+                                            <h3 class="mt-4 card-product__title text-lg font-medium text-gray-900">
+                                                Samsung
+                                                Galaxy A73 128GB
+
+                                            </h3>
+
+                                            <div class="flex items-center">
+                                                <p class="mt-1.5 text-xl text-red-500 ">$14.99</p>
+                                                <p class="mt-1.5 text-sm text-gray-700 ms-2 line-through ">$14.99</p>
+                                            </div>
+
+                                            <!-- Rating here -->
+                                            <ul class="flex justify-center mt-2">
+                                                <li>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        fill="currentColor" class="mr-1 h-5 w-5 text-warning">
+                                                        <path fill-rule="evenodd"
+                                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </li>
+                                                <li>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        fill="currentColor" class="mr-1 h-5 w-5 text-warning">
+                                                        <path fill-rule="evenodd"
+                                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </li>
+                                                <li>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        fill="currentColor" class="mr-1 h-5 w-5 text-warning">
+                                                        <path fill-rule="evenodd"
+                                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </li>
+                                                <li>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="mr-1 h-5 w-5 text-warning">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                                                    </svg>
+                                                </li>
+                                                <li>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="mr-1 h-5 w-5 text-warning">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                                                    </svg>
+                                                </li>
+                                            </ul>
+
+                                            <form class="mt-4">
+                                                <button
+                                                    class="block w-full rounded bg-slate-300 p-4 text-sm font-medium transition hover:scale-105">
+                                                    Add to Cart
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="lg:w-1/3 md:w-1/2 p-4 w-full">
+                                    <a href="detail-product.html"
+                                        class="group relative block overflow-hidden border pt-2">
+                                        <button
+                                            class="absolute end-4 top-4 z-4 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75">
+                                            <span class="sr-only">Wishlist</span>
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                            </svg>
+                                        </button>
+
+                                        <div>
+                                            <img src="https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/g/t/gtt7766.jpg"
+                                                alt=""
+                                                class="h-64 w-full transition duration-500 group-hover:scale-105 sm:h-72 xl:px-4 md:px-2" />
+
+                                        </div>
+                                        <div class="relative border border-gray-100 bg-white p-6">
+                                            <span
+                                                class="whitespace-nowrap bg-slate-300 px-3 py-1.5 text-xs font-medium">
+                                                New
+                                            </span>
+
+                                            <h3 class="mt-4 card-product__title text-lg font-medium text-gray-900">
+                                                iPhone 13
+                                                128GB | Chính hãng VN/A
+                                            </h3>
+
+                                            <div class="flex items-center">
+                                                <p class="mt-1.5 text-xl text-red-500 ">$14.99</p>
+                                                <p class="mt-1.5 text-sm text-gray-700 ms-2 line-through ">$14.99</p>
+                                            </div>
+
+                                            <!-- Rating here -->
+                                            <ul class="flex justify-center mt-2">
+                                                <li>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        fill="currentColor" class="mr-1 h-5 w-5 text-warning">
+                                                        <path fill-rule="evenodd"
+                                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </li>
+                                                <li>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        fill="currentColor" class="mr-1 h-5 w-5 text-warning">
+                                                        <path fill-rule="evenodd"
+                                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </li>
+                                                <li>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        fill="currentColor" class="mr-1 h-5 w-5 text-warning">
+                                                        <path fill-rule="evenodd"
+                                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </li>
+                                                <li>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="mr-1 h-5 w-5 text-warning">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                                                    </svg>
+                                                </li>
+                                                <li>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="mr-1 h-5 w-5 text-warning">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                                                    </svg>
+                                                </li>
+                                            </ul>
+
+                                            <form class="mt-4">
+                                                <button
+                                                    class="block w-full rounded bg-slate-300 p-4 text-sm font-medium transition hover:scale-105">
+                                                    Add to Cart
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="lg:w-1/3 md:w-1/2 p-4 w-full">
+                                    <a href="detail-product.html"
+                                        class="group relative block overflow-hidden border pt-2">
+                                        <button
+                                            class="absolute end-4 top-4 z-4 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75">
+                                            <span class="sr-only">Wishlist</span>
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                            </svg>
+                                        </button>
+
+                                        <div>
+                                            <img src="https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/p/h/photo_2022-09-28_21-58-51_4.jpg"
+                                                alt=""
+                                                class="h-64 w-full transition duration-500 group-hover:scale-105 sm:h-72 xl:px-4 md:px-2" />
+
+                                        </div>
+                                        <div class="relative border border-gray-100 bg-white p-6">
+                                            <span
+                                                class="whitespace-nowrap bg-slate-300 px-3 py-1.5 text-xs font-medium">
+                                                New
+                                            </span>
+
+                                            <h3 class="mt-4 card-product__title text-lg font-medium text-gray-900">ASUS
+                                                ROG
+                                                Phone 6 12GB 256GB
+                                            </h3>
+
+                                            <div class="flex items-center">
+                                                <p class="mt-1.5 text-xl text-red-500 ">$14.99</p>
+                                                <p class="mt-1.5 text-sm text-gray-700 ms-2 line-through ">$14.99</p>
+                                            </div>
+
+                                            <!-- Rating here -->
+                                            <ul class="flex justify-center mt-2">
+                                                <li>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        fill="currentColor" class="mr-1 h-5 w-5 text-warning">
+                                                        <path fill-rule="evenodd"
+                                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </li>
+                                                <li>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        fill="currentColor" class="mr-1 h-5 w-5 text-warning">
+                                                        <path fill-rule="evenodd"
+                                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </li>
+                                                <li>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        fill="currentColor" class="mr-1 h-5 w-5 text-warning">
+                                                        <path fill-rule="evenodd"
+                                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </li>
+                                                <li>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="mr-1 h-5 w-5 text-warning">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                                                    </svg>
+                                                </li>
+                                                <li>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="mr-1 h-5 w-5 text-warning">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                                                    </svg>
+                                                </li>
+                                            </ul>
+
+                                            <form class="mt-4">
+                                                <button
+                                                    class="block w-full rounded bg-slate-300 p-4 text-sm font-medium transition hover:scale-105">
+                                                    Add to Cart
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="lg:w-1/3 md:w-1/2 p-4 w-full">
+                                    <a href="detail-product.html"
+                                        class="group relative block overflow-hidden border pt-2">
+                                        <button
+                                            class="absolute end-4 top-4 z-4 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75">
+                                            <span class="sr-only">Wishlist</span>
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                            </svg>
+                                        </button>
+
+                                        <div>
+                                            <img src="https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/f/d/fdeen_1_.jpg"
+                                                alt=""
+                                                class="h-64 w-full transition duration-500 group-hover:scale-105 sm:h-72 xl:px-4 md:px-2" />
+
+                                        </div>
+                                        <div class="relative border border-gray-100 bg-white p-6">
+                                            <span
+                                                class="whitespace-nowrap bg-slate-300 px-3 py-1.5 text-xs font-medium">
+                                                New
+                                            </span>
+
+                                            <h3 class="mt-4 card-product__title text-lg font-medium text-gray-900">
+                                                Samsung
+                                                Galaxy S22 Plus (8GB - 256GB)
+
+                                            </h3>
+
+                                            <div class="flex items-center">
+                                                <p class="mt-1.5 text-xl text-red-500 ">$14.99</p>
+                                                <p class="mt-1.5 text-sm text-gray-700 ms-2 line-through ">$14.99</p>
+                                            </div>
+
+                                            <!-- Rating here -->
+                                            <ul class="flex justify-center mt-2">
+                                                <li>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        fill="currentColor" class="mr-1 h-5 w-5 text-warning">
+                                                        <path fill-rule="evenodd"
+                                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </li>
+                                                <li>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        fill="currentColor" class="mr-1 h-5 w-5 text-warning">
+                                                        <path fill-rule="evenodd"
+                                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </li>
+                                                <li>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        fill="currentColor" class="mr-1 h-5 w-5 text-warning">
+                                                        <path fill-rule="evenodd"
+                                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </li>
+                                                <li>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="mr-1 h-5 w-5 text-warning">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                                                    </svg>
+                                                </li>
+                                                <li>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="mr-1 h-5 w-5 text-warning">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                                                    </svg>
+                                                </li>
+                                            </ul>
+
+                                            <form class="mt-4">
+                                                <button
+                                                    class="block w-full rounded bg-slate-300 p-4 text-sm font-medium transition hover:scale-105">
+                                                    Add to Cart
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="lg:w-1/3 md:w-1/2 p-4 w-full">
+                                    <a href="detail-product.html"
+                                        class="group relative block overflow-hidden border pt-2">
+                                        <button
+                                            class="absolute end-4 top-4 z-4 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75">
+                                            <span class="sr-only">Wishlist</span>
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                            </svg>
+                                        </button>
+
+                                        <div>
+                                            <img src="https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/g/t/gtt7766.jpg"
+                                                alt=""
+                                                class="h-64 w-full transition duration-500 group-hover:scale-105 sm:h-72 xl:px-4 md:px-2" />
+
+                                        </div>
+                                        <div class="relative border border-gray-100 bg-white p-6">
+                                            <span
+                                                class="whitespace-nowrap bg-slate-300 px-3 py-1.5 text-xs font-medium">
+                                                New
+                                            </span>
+
+                                            <h3 class="mt-4 card-product__title text-lg font-medium text-gray-900">
+                                                OnePlus
+                                                11 16GB 256GB
+                                            </h3>
+
+                                            <div class="flex items-center">
+                                                <p class="mt-1.5 text-xl text-red-500 ">$14.99</p>
+                                                <p class="mt-1.5 text-sm text-gray-700 ms-2 line-through ">$14.99</p>
+                                            </div>
+
+                                            <!-- Rating here -->
+                                            <ul class="flex justify-center mt-2">
+                                                <li>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        fill="currentColor" class="mr-1 h-5 w-5 text-warning">
+                                                        <path fill-rule="evenodd"
+                                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </li>
+                                                <li>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        fill="currentColor" class="mr-1 h-5 w-5 text-warning">
+                                                        <path fill-rule="evenodd"
+                                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </li>
+                                                <li>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        fill="currentColor" class="mr-1 h-5 w-5 text-warning">
+                                                        <path fill-rule="evenodd"
+                                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </li>
+                                                <li>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="mr-1 h-5 w-5 text-warning">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                                                    </svg>
+                                                </li>
+                                                <li>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="mr-1 h-5 w-5 text-warning">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                                                    </svg>
+                                                </li>
+                                            </ul>
+
+                                            <form class="mt-4">
+                                                <button
+                                                    class="block w-full rounded bg-slate-300 p-4 text-sm font-medium transition hover:scale-105">
+                                                    Add to Cart
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="lg:w-1/3 md:w-1/2 p-4 w-full">
+                                    <a class="block relative h-48 rounded overflow-hidden">
+                                        <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+                                            src="https://dummyimage.com/421x261">
+                                    </a>
+                                    <div class="mt-4">
+                                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                                        <h2 class="text-gray-900 title-font text-lg font-medium">Shooting Stars</h2>
+                                        <p class="mt-1">$21.15</p>
+                                    </div>
+                                </div>
+                                <div class="lg:w-1/3 md:w-1/2 p-4 w-full">
+                                    <a class="block relative h-48 rounded overflow-hidden">
+                                        <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+                                            src="https://dummyimage.com/422x262">
+                                    </a>
+                                    <div class="mt-4">
+                                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                                        <h2 class="text-gray-900 title-font text-lg font-medium">Neptune</h2>
+                                        <p class="mt-1">$12.00</p>
+                                    </div>
+                                </div>
+                                <div class="lg:w-1/3 md:w-1/2 p-4 w-full">
+                                    <a class="block relative h-48 rounded overflow-hidden">
+                                        <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+                                            src="https://dummyimage.com/423x263">
+                                    </a>
+                                    <div class="mt-4">
+                                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                                        <h2 class="text-gray-900 title-font text-lg font-medium">The 400 Blows</h2>
+                                        <p class="mt-1">$18.40</p>
+                                    </div>
+                                </div>
+                                <div class="lg:w-1/3 md:w-1/2 p-4 w-full">
+                                    <a class="block relative h-48 rounded overflow-hidden">
+                                        <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+                                            src="https://dummyimage.com/424x264">
+                                    </a>
+                                    <div class="mt-4">
+                                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                                        <h2 class="text-gray-900 title-font text-lg font-medium">The Catalyzer</h2>
+                                        <p class="mt-1">$16.00</p>
+                                    </div>
+                                </div>
+                                <div class="lg:w-1/3 md:w-1/2 p-4 w-full">
+                                    <a class="block relative h-48 rounded overflow-hidden">
+                                        <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+                                            src="https://dummyimage.com/425x265">
+                                    </a>
+                                    <div class="mt-4">
+                                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                                        <h2 class="text-gray-900 title-font text-lg font-medium">Shooting Stars</h2>
+                                        <p class="mt-1">$21.15</p>
+                                    </div>
+                                </div>
+                                <div class="lg:w-1/3 md:w-1/2 p-4 w-full">
+                                    <a class="block relative h-48 rounded overflow-hidden">
+                                        <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+                                            src="https://dummyimage.com/427x267">
+                                    </a>
+                                    <div class="mt-4">
+                                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                                        <h2 class="text-gray-900 title-font text-lg font-medium">Neptune</h2>
+                                        <p class="mt-1">$12.00</p>
+                                    </div>
+                                </div>
+                                <div class="lg:w-1/3 md:w-1/2 p-4 w-full">
+                                    <a class="block relative h-48 rounded overflow-hidden">
+                                        <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+                                            src="https://dummyimage.com/428x268">
+                                    </a>
+                                    <div class="mt-4">
+                                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                                        <h2 class="text-gray-900 title-font text-lg font-medium">The 400 Blows</h2>
+                                        <p class="mt-1">$18.40</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div id="pagination">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Footer -->
+
+
+        <div id="footer">
+
+        </div>
+
+        <div id="modal-wrapper"></div>
+
+
+    </div>
+
+    
+
+    
+
+    
+
+</body>
+
+</html>
