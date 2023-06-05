@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../assets/css/index.css">
     <link rel="stylesheet" href="../assets/css/base.css">
     <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/custom.css">
     <style>
         #summary {
             background-color: #f6f6f6;
@@ -21,7 +22,7 @@
 
 <body>
 
-    <div id="main" class="container mx-auto xl:px-20">
+    <div id="main" class="md:container md:mx-auto xl:px-20 max-[600px]:mx-2 sm:overflow-hidden md:overflow-auto">
         <div id="top-header">
 
         </div>
@@ -29,9 +30,10 @@
 
         <div class="shopping-cart bg-gray-100">
 
-            <div class="container mx-auto mt-10">
-                <div class="flex shadow-md my-10 border overflow-hidden">
-                    <div id="view-cart" class="w-3/4 bg-white px-10 py-10 h-[46rem] overflow-y-auto">
+            <div class="md:container mx-auto mt-10">
+                <div class="flex shadow-md my-10 border overflow-hidden flex-wrap">
+                    <div id="view-cart"
+                        class="max-[667px]:w-full md:w-3/4 sm:w-full bg-white px-10 py-10 h-auto md:h-[46rem] overflow-y-auto">
                         <div class="flex justify-between border-b pb-8">
                             <h1 class="font-semibold text-2xl">Shopping Cart</h1>
                             <h2 class="font-semibold text-2xl"><span id="cartQty">3</span> Items</h2>
@@ -50,7 +52,7 @@
 
                     </div>
 
-                    <div id="summary" class="w-1/4 px-8 py-10">
+                    <div id="summary" class="max-[667px]:w-full md:w-1/4 sm:w-full px-8 py-10">
                         <h1 class="font-semibold text-2xl border-b pb-8">Order Summary</h1>
                         <div class="flex justify-between mt-10 mb-5">
                             <span class="font-semibold text-sm uppercase">Subtotal:</span>

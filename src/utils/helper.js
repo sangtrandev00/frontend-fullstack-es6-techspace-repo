@@ -41,8 +41,7 @@ export const innerHTML = (elementId, html) => {
 export const imageContent = (elementId, imageUrl, alt = "error image") => {
   if (!elementId) return;
   const imageEl = document.getElementById(elementId);
-  console.log("image: ", imageUrl);
-  console.log(imageEl);
+
   imageEl?.setAttribute("src", imageUrl);
   imageEl?.setAttribute("alt", alt);
 };

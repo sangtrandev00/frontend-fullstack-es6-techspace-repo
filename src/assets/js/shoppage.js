@@ -60,7 +60,7 @@ const listProducts = (products, totalRows = products.length, currPage = 1, limit
           <div>
               <img src="${imageUrl}"
                   alt="${name}"
-                  class="h-64 w-full transition duration-500 group-hover:scale-105 sm:h-72 xl:px-4 md:px-2" />
+                  class="h-64 w-full transition duration-500 group-hover:scale-105 sm:h-72 xl:px-4 md:px-2 object-contain sm:object-none" />
 
           </div>
           <div class="relative border border-gray-100 bg-white p-6">

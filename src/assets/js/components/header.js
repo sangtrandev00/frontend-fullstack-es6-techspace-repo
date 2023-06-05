@@ -1,26 +1,28 @@
+import { BACKEND_URL } from "../../../constant/backend-domain";
+
 const getHeader = () => {
   return `
-    <header class="text-gray-600 body-font sticky z-10 top-14 mt-14 left-0 right-0 bg-slate-500 xl:px-20 mx-auto -ms-20 -me-20">
-    <div class="container mx-auto flex flex-wrap flex-col md:flex-row items-center text-white justify-around">
+    <header class="text-gray-600 body-font relative z-10  mt-14  bg-slate-500 xl:px-20 mx-auto -ms-20 -me-20">
+    <div class="md:container mx-auto flex flex-wrap flex-col md:flex-row items-center text-white justify-around max-[700px]:py-4 md:py-2 w-fit max-[1024px]:px-4">
         <a href="./index.html" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 py-2">
-            <img src="../assets/images/tech-main-logo-bright.png" alt="" class="w-20 h-20 rounded-full">
+            <img src="${BACKEND_URL}/images/tech-main-logo-bright.png" alt="" class="w-20 h-20 rounded-full">
         </a>
-        <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+        <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center ">
             <a href="./shop.html"
-                class="mr-5 hover:text-gray-900 cursor-pointer bg-gray-100/50 px-4 py-2 rounded-[2px] ">Shop
+                class=" xl:mr-5 max-[667px]:mx-4 hover:text-gray-900 cursor-pointer bg-gray-100/50 px-4 py-2 rounded-[2px] md:w-[8rem] flex justify-between items-center max-[700px]:my-2 md:mx-2 max-[668px]:w-[10rem] ">Shop
                 <i class="fa-solid fa-store"></i></a>
             <a href="./blog-posts.html"
-                class="mr-5 hover:text-gray-900 cursor-pointer bg-gray-100/50 px-4 py-2 rounded-[2px]">Blog
+                class=" xl:mr-5 max-[667px]:mx-4 hover:text-gray-900 cursor-pointer bg-gray-100/50 px-4 py-2 rounded-[2px] md:w-[8rem] flex justify-between items-center max-[700px]:my-2 md:mx-2 max-[668px]:w-[10rem]">Blog
                 <i class="fa-brands fa-blogger-b"></i></a>
             <a href="./contact.html"
-                class="mr-5 hover:text-gray-900 cursor-pointer bg-gray-100/50 px-4 py-2 rounded-[2px]">Contact
+                class=" xl:mr-5 max-[667px]:mx-4 hover:text-gray-900 cursor-pointer bg-gray-100/50 px-4 py-2 rounded-[2px] md:w-[8rem] flex justify-between items-center max-[700px]:my-2 md:mx-2 max-[668px]:w-[10rem]">Contact
                 <i class="fa-solid fa-address-book"></i></a>
             <a href="./about.html"
-                class="mr-5 hover:text-gray-900 cursor-pointer bg-gray-100/50 px-4 py-2 rounded-[2px]">About
+                class=" xl:mr-5 max-[667px]:mx-4 hover:text-gray-900 cursor-pointer bg-gray-100/50 px-4 py-2 rounded-[2px] md:w-[8rem] flex justify-between items-center max-[700px]:my-2 md:mx-2 max-[668px]:w-[10rem]">About
                 <i class="fa-solid fa-address-card"></i></a>
         </nav>
 
-        <form class="flex items-center me-10" action="./shop.html" method="GET">   
+        <form class="flex items-center md:me-10" action="./shop.html" method="GET">   
             <label for="simple-search" class="sr-only">Search</label>
             <div class="relative w-full">
                 <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">

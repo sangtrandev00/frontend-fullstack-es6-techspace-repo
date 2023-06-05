@@ -1,23 +1,25 @@
+#main {
+  overflow: hidden;
+}
 
-
+#header > header > div {
+  width: fit-content;
+}
 
 nav#sidenav-1 {
-    width: 220px!important;
+  width: 220px !important;
 }
 
 .carousel-section__block-center {
-    /* margin-left: 3rem; */
+  /* margin-left: 3rem; */
 }
 
 .sidenav-1 {
-    width: 0rem;
+  width: 0rem;
 }
-
 
 /* Banner swiper */
 
 .swiper-banner-pagination {
-    text-align: center;
+  text-align: center;
 }
-
-

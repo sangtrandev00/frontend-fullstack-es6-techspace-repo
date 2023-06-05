@@ -34,7 +34,7 @@ const renderCatalogs = async () => {
     const { cateImage, name, _id } = catalog;
 
     const catalogItemHtml = `
-        <div class="flex flex-shrink-0 relative w-1/4 sm:w-auto">
+        <div class="flex flex-shrink-0 relative md:w-1/4 sm:w-auto max-[640px]:w-auto">
                             <img src="${BACKEND_URL}/${cateImage}"
                                 alt="black chair and white table" class="object-cover object-center w-[358px] h-[358px]"/>
                             <div class="bg-gray-800 bg-opacity-30 absolute w-full h-full p-6">
@@ -211,4 +211,5 @@ document.addEventListener("DOMContentLoaded", () => {
   imageContent("right-banner-image-1", `${BACKEND_URL}/images/small-picture-banner-1-right.jpg`);
   imageContent("right-banner-image-2", `${BACKEND_URL}/images/small-picture-banner-2-right.jpg`);
   imageContent("right-banner-image-3", `${BACKEND_URL}/images/small-picture-banner-3-right.jpg`);
+  // imageContent("right-banner-image-3", `${BACKEND_URL}/images/small-picture-banner-3-right.jpg`);
 });
