@@ -1,0 +1,34 @@
+{
+  "name": "frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.23",
+    "tailwindcss": "^3.3.2",
+    "vite": "^4.3.2"
+  },
+  "dependencies": {
+    "@ckeditor/ckeditor5-autoformat": "^38.0.1",
+    "@ckeditor/ckeditor5-basic-styles": "^38.0.1",
+    "@ckeditor/ckeditor5-build-classic": "^38.0.1",
+    "@ckeditor/ckeditor5-essentials": "^38.0.1",
+    "@ckeditor/ckeditor5-heading": "^38.0.1",
+    "@ckeditor/ckeditor5-link": "^38.0.1",
+    "@ckeditor/ckeditor5-theme-lark": "^38.0.1",
+    "axios": "^1.4.0",
+    "chart.js": "^4.3.0",
+    "datatables.net-dt": "^1.13.4",
+    "datatables.net-responsive-dt": "^2.4.1",
+    "firebase": "^9.22.1",
+    "flowbite": "^1.6.5",
+    "swiper": "^9.3.1",
+    "tw-elements": "^1.0.0-beta2"
+  }
+}

@@ -1,0 +1,29 @@
+/* common css var */
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --grey-color: #ccc;
+    --text-color: #333;
+    /* --primary-color: #f7941d; */
+    --main-color: #283054;
+    --background-main-color: #4299E1;
+}
+
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family:"Helvetica Neue",sans-serif;
+    font-size: 100%;
+    line-height: 1.6rem;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+ul {
+    padding-left: 0px;
+    margin: 0px;
+}

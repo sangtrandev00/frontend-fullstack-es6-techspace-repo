@@ -1,0 +1,23 @@
+
+
+
+nav#sidenav-1 {
+    width: 220px!important;
+}
+
+.carousel-section__block-center {
+    /* margin-left: 3rem; */
+}
+
+.sidenav-1 {
+    width: 0rem;
+}
+
+
+/* Banner swiper */
+
+.swiper-banner-pagination {
+    text-align: center;
+}
+
+
