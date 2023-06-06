@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       const { users } = await UsersApi.getAll();
 
       const tableRows = users.map((user) => {
-        const { _id, name, avatar, email, phone, address, role, payment } = user;
+        const { _id, name, avatar, email, phone, address, role, payment, providerId } = user;
         let avatarHtml;
         if (avatar.startsWith("http")) {
           avatarHtml = `<img class="h-12 w-12 object-cover" src="${avatar}" alt="${name}" />`;
@@ -24,12 +24,13 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
         return [
           _id,
-          name,
+          name || "",
           avatarHtml,
-          email,
-          phone,
-          address,
-          role,
+          providerId || "",
+          email || "",
+          phone || "",
+          address || "",
+          role || "client",
           payment,
           `
           <div class="flex space-x-2 w-10 h-full">
@@ -133,6 +134,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           { title: "ID" },
           { title: "User Name" },
           { title: "Avatar" },
+          { title: "ProviderId" },
           { title: "Email" },
           { title: "Phone" },
           { title: "Address" },
