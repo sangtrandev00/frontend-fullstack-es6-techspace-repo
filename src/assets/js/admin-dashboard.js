@@ -6,7 +6,11 @@ import Chart from "chart.js/auto";
 import DataTable from "datatables.net-dt";
 // import { updateOrder, viewOrderDetail } from "./admin-orders";
 
-const totalProdsEl = document.getElementById("totalProducts");
+const orderStatus1El = document.querySelector("a[href='#tabs-orders-status-1']");
+const orderStatus2El = document.querySelector("a[href='#tabs-orders-status-2']");
+const orderStatus3El = document.querySelector("a[href='#tabs-orders-status-3']");
+const orderStatus4El = document.querySelector("a[href='#tabs-orders-status-4']");
+const orderStatus5El = document.querySelector("a[href='#tabs-orders-status-5']");
 
 const totalViewsEl = document.getElementById("totalViews");
 
@@ -14,10 +18,14 @@ const totalUsersEl = document.getElementById("totalUsers");
 
 const totalSaleEl = document.getElementById("totalSale");
 
-const tableOrders = document.getElementById("table-orders");
-const [tableBody] = tableOrders.tBodies;
+const tabsListEl = document.getElementById("tabs-list");
+
+// const tableOrders = document.getElementById("table-orders");
+// const [tableBody] = tableOrders?.tBodies;
+
 const viewDetailCart = document.getElementById("view-detail-cart");
 const displayOrderEl = document.getElementById("display-order");
+const displayOrderModalEl = document.getElementById("display-orders-modal");
 const updateOrderBtn = document.getElementById("updateOrderBtn");
 const viewOrderDetailBtn = document.getElementById("viewOrderDetailBtn");
 const deleteOrderBtnTrigger = document.getElementById("deleteOrderBtnTrigger");
@@ -25,8 +33,16 @@ const deleteOrderBtnTrigger = document.getElementById("deleteOrderBtnTrigger");
 const ordersStatusTriggerBtn = document.getElementById("ordersStatusTriggerBtn");
 
 const ctx = document.getElementById("myChart");
+
 let tableOrdersGlobal;
+
 let myChart;
+
+var tableElement1 = document.querySelector("#table-orders-status-1");
+var tableElement2 = document.querySelector("#table-orders-status-2");
+var tableElement3 = document.querySelector("#table-orders-status-3");
+var tableElement4 = document.querySelector("#table-orders-status-4");
+var tableElement5 = document.querySelector("#table-orders-status-5");
 
 const createChartByYear = (ordersSuccess, selectedYear) => {
   const selectedOrders = ordersSuccess.filter((order) => {
@@ -107,7 +123,16 @@ const createChartByYear = (ordersSuccess, selectedYear) => {
 };
 
 // await renderOrderList();
-const renderOrdersByStatus = (selectedOrders) => {
+const renderOrdersByStatus = (selectedOrders, tableId) => {
+  const tableOrders = document.getElementById(tableId);
+
+  const [tableBody] = tableOrders.tBodies;
+
+  // console.log("tableOrderEl: ", tableOrders);
+  // console.log("tableOrderEl: ", tableBody);
+
+  if (!tableBody) return;
+
   try {
     tableBody.innerHTML = "";
     const tableRows = selectedOrders.map((order) => {
@@ -177,11 +202,39 @@ const renderOrdersByStatus = (selectedOrders) => {
       ];
     });
 
-    if (tableOrdersGlobal) {
-      tableOrdersGlobal.destroy();
+    // if (tableOrdersGlobal) {
+    //   tableOrdersGlobal.destroy();
+    // }
+
+    if (tableElement1.classList.contains("dataTable")) {
+      // Destroy DataTable
+      const dataTable = new DataTable(tableElement1);
+      dataTable.destroy();
+    }
+    if (tableElement2.classList.contains("dataTable")) {
+      // Destroy DataTable
+      const dataTable = new DataTable(tableElement2);
+      dataTable.destroy();
+    }
+    if (tableElement3.classList.contains("dataTable")) {
+      // Destroy DataTable
+      const dataTable = new DataTable(tableElement3);
+      dataTable.destroy();
+    }
+    if (tableElement4.classList.contains("dataTable")) {
+      // Destroy DataTable
+      const dataTable = new DataTable(tableElement4);
+      dataTable.destroy();
+    }
+    if (tableElement5.classList.contains("dataTable")) {
+      // Destroy DataTable
+      const dataTable = new DataTable(tableElement5);
+      dataTable.destroy();
     }
 
-    tableOrdersGlobal = new DataTable("#table-orders", {
+    // console.log("data: ", tableRows);
+
+    tableOrdersGlobal = new DataTable(`#${tableId}`, {
       data: tableRows,
       columns: [
         { title: "#ID" },
@@ -195,13 +248,17 @@ const renderOrdersByStatus = (selectedOrders) => {
       ],
       responsive: true,
     });
+
+    console.log("tableOrdersGlobal", tableOrdersGlobal);
   } catch (error) {
     console.log(error);
   }
 };
 
 const updateOrder = async () => {
-  displayOrderEl.addEventListener("click", async (e) => {
+  displayOrderModalEl.addEventListener("click", async (e) => {
+    // console.log("target clicked: ", e.target);
+
     if (e.target && e.target.classList.contains("update-modal-trigger")) {
       const orderId = e.target.closest("button").getAttribute("order-id");
 
@@ -265,8 +322,6 @@ const updateOrder = async () => {
       }
     }
   });
-
-  return;
 };
 
 (async () => {
@@ -298,26 +353,53 @@ const updateOrder = async () => {
   textContent("totalUsers", users.length);
   textContent("totalSale", `$${totalSales.toFixed(2)} `);
   textContent("totalViews", totalViews);
+
   innerHTML(
     "unconfirmedOrders",
     `${unconfirmedOrders.length} <i class="fa-solid fa-magnifying-glass-plus"></i>`
   );
+
+  innerHTML(
+    "unconfirmed-qty-orders",
+    `(${unconfirmedOrders.length} ) <i class="fa-solid fa-cart-shopping text-primary-600"></i>`
+  );
+
   innerHTML(
     "confirmedOrders",
-    `${confirmedOrders.length} <i class="fa-solid fa-magnifying-glass-plus"></i>`
+    `${confirmedOrders.length}<i class="fa-solid fa-magnifying-glass-plus"></i>`
   );
+
+  innerHTML(
+    "confirmed-qty-orders",
+    `(${confirmedOrders.length} ) <i class="fa-solid fa-cart-shopping text-primary-600"></i>`
+  );
+
   innerHTML(
     "shippingOrders",
     `${shippingOrders.length} <i class="fa-solid fa-magnifying-glass-plus"></i>`
+  );
+
+  innerHTML(
+    "shipping-qty-orders",
+    `(${shippingOrders.length} ) <i class="fa-solid fa-cart-shopping text-primary-600"></i>`
   );
   innerHTML(
     "successOrders",
     `${ordersSuccess.length} <i class="fa-solid fa-magnifying-glass-plus"></i>`
   );
   innerHTML(
+    "success-qty-orders",
+    `(${ordersSuccess.length} ) <i class="fa-solid fa-cart-shopping text-primary-600"></i>`
+  );
+  innerHTML(
     "failedOrders",
     `${failedOrders.length} <i class="fa-solid fa-magnifying-glass-plus"></i>`
   );
+  innerHTML(
+    "failed-qty-orders",
+    `(${failedOrders.length} ) <i class="fa-solid fa-cart-shopping text-primary-600"></i>`
+  );
+
   // Create a bar chart
   createChartByYear(ordersSuccess, 2023);
 
@@ -326,40 +408,99 @@ const updateOrder = async () => {
     createChartByYear(ordersSuccess, selectedYear);
   });
 
-  document.getElementById("orders-status-el").addEventListener("click", (e) => {
+  document.getElementById("orders-status-el").addEventListener("click", async (e) => {
     e.preventDefault();
     // Unconfirmed
     if (e.target && e.target.id === "unconfirmedOrders") {
       ordersStatusTriggerBtn.click();
-
-      renderOrdersByStatus(unconfirmedOrders);
+      // orderStatus1El.click();
+      renderOrdersByStatus(unconfirmedOrders, "table-orders-status-1");
     }
+
     // Confirmed
     if (e.target && e.target.id === "confirmedOrders") {
       ordersStatusTriggerBtn.click();
 
-      renderOrdersByStatus(confirmedOrders);
+      renderOrdersByStatus(confirmedOrders, "table-orders-status-2");
+      orderStatus2El.click();
     }
+
     // Shipping
     if (e.target && e.target.id === "shippingOrders") {
       ordersStatusTriggerBtn.click();
 
-      renderOrdersByStatus(shippingOrders);
-    }
-    // Success
+      renderOrdersByStatus(shippingOrders, "table-orders-status-3");
 
+      orderStatus3El.click();
+    }
+
+    // Success
     if (e.target && e.target.id === "successOrders") {
       ordersStatusTriggerBtn.click();
 
-      renderOrdersByStatus(ordersSuccess);
+      renderOrdersByStatus(ordersSuccess, "table-orders-status-4");
+
+      orderStatus4El.click();
     }
 
     // Failed
     if (e.target && e.target.id === "failedOrders") {
       ordersStatusTriggerBtn.click();
 
-      renderOrdersByStatus(failedOrders);
+      renderOrdersByStatus(failedOrders, "table-orders-status-5");
+
+      orderStatus5El.click();
     }
+
+    await updateOrder();
+  });
+
+  // renderOrdersByStatus(unconfirmedOrders, "table-orders-status-1");
+  // renderOrdersByStatus(confirmedOrders, "table-orders-status-2");
+  // renderOrdersByStatus(shippingOrders, "table-orders-status-3");
+  // renderOrdersByStatus(ordersSuccess, "table-orders-status-4");
+  // renderOrdersByStatus(failedOrders, "table-orders-status-5");
+
+  tabsListEl.addEventListener("click", async (e) => {
+    const linkEl = e.target.closest("a");
+
+    switch (linkEl.dataset.orderStatus) {
+      case "unconfirmed":
+        // document.getElementById("table-orders-status-1").innerHTML = "";
+        renderOrdersByStatus(unconfirmedOrders, "table-orders-status-1");
+
+        break;
+      case "confirmed":
+        // document.getElementById("table-orders-status-2").innerHTML = "";
+
+        renderOrdersByStatus(confirmedOrders, "table-orders-status-2");
+
+        break;
+      case "shipping":
+        // document.getElementById("table-orders-status-3").innerHTML = "";
+
+        renderOrdersByStatus(shippingOrders, "table-orders-status-3");
+
+        break;
+      case "success":
+        // document.getElementById("table-orders-status-4").innerHTML = "";
+
+        renderOrdersByStatus(ordersSuccess, "table-orders-status-4");
+
+        break;
+      case "failed":
+        // document.getElementById("table-orders-status-5").innerHTML = "";
+
+        renderOrdersByStatus(failedOrders, "table-orders-status-5");
+
+        break;
+
+      default:
+        break;
+    }
+
+    await updateOrder();
+    // }
   });
 
   await updateOrder();

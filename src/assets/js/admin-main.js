@@ -1,11 +1,11 @@
 import "flowbite";
 
-import { Chart, initTE, Modal, Ripple, Toast } from "tw-elements";
+import { Chart, initTE, Modal, Ripple, Toast, Tab } from "tw-elements";
 import UsersApi from "../../api/usersApi";
 import { imageContent, textContent } from "../../utils/helper";
 import { BACKEND_URL } from "../../constant/backend-domain";
 
-initTE({ Modal, Ripple, Toast });
+initTE({ Modal, Ripple, Toast, Tab });
 
 const { adminId, adminToken, adminExpiryDate } = localStorage;
 

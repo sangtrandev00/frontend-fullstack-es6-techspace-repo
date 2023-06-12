@@ -1,12 +1,14 @@
+import { BACKEND_URL } from "../../../constant/backend-domain";
+
 const getFooter = () => {
-    return `
+  return `
     <div class="footer-wrapper bg-slate-300 -ms-20 -me-20">
     <div class="mx-auto container py-16 xl:px-20 lg:px-12 sm:px-6 px-4 text-yellow-50 relative ">
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 md:gap-8 gap-4">
             <div class="flex flex-col flex-shrink-0">
                 <div class="dark:text-white">
-                    <img class="dark:hidden w-20 h-20 rounded-full"
-                        src="../assets/images/tech-main-logo-bright.png" alt="icon">
+                    <img id="bottom-logo" class="dark:hidden w-20 h-20 rounded-full"
+                        src="${BACKEND_URL}/images/tech-main-logo-bright.png" alt="icon">
                     <img class="hidden dark:block"
                         src="https://tuk-cdn.s3.amazonaws.com/can-uploader/footer-I-svg1dark.svg" alt="icon">
                 </div>
@@ -121,7 +123,7 @@ const getFooter = () => {
         </div>
     </div>
 </div>
-    `
-}
+    `;
+};
 
 export default getFooter;

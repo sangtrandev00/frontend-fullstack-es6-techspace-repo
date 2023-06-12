@@ -1,6 +1,5 @@
 const getSidebar = () => {
-
-    return `
+  return `
     <aside
     class="fixed top-0 left-0 z-40 w-64 h-screen pt-14 transition-transform -translate-x-full bg-white border-r border-gray-200 md:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
     aria-label="Sidenav" id="drawer-navigation">
@@ -38,7 +37,7 @@ const getSidebar = () => {
             <li>
                 <button type="button"
                     class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                    aria-controls="dropdown-sales" data-collapse-toggle="dropdown-sales">
+                    aria-controls="dropdown-sales" data-collapse-toggle="dropdown-sales" aria-expanded="true">
                     <svg aria-hidden="true"
                         class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
                         fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -54,7 +53,7 @@ const getSidebar = () => {
                             clip-rule="evenodd"></path>
                     </svg>
                 </button>
-                <ul id="dropdown-sales" class="hidden py-2 space-y-2">
+                <ul id="dropdown-sales" class="py-2 space-y-2">
                     <li>
                         <a href="./products.html"
                             class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
@@ -80,7 +79,7 @@ const getSidebar = () => {
     </div>
     
 </aside>
-    `
-}
+    `;
+};
 
 export default getSidebar;
