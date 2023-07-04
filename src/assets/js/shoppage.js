@@ -213,8 +213,8 @@ const renderCateList = async () => {
 
   const viewAllEl = ` <a href="#"
   class="flex items-center text-sm font-medium text-primary-600 dark:text-primary-500 hover:underline">
-  View all
-</a>`;
+    View all
+  </a>`;
 
   categories.forEach((cate) => {
     const { _id, name, cateImage, description } = cate;
@@ -498,8 +498,12 @@ const sortHandler = () => {
   paginationHandler();
   sortHandler();
   moveToDetail();
-})();
 
+  const response = await ShopApi.getProducts({ _limit: 12 });
+
+  console.log(response);
+})();
+console.log("ahihi");
 console.log(getParams("_cateIds")?.split(","));
 console.log([...getParams("_cateIds")?.split(","), "dfsdjfksdlfjdskl"].join(","));
 

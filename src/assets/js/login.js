@@ -25,16 +25,13 @@ const loginHandler = async () => {
     e.preventDefault();
     const email = e.target.elements["email"].value;
     const password = e.target.elements["password"].value;
-
     const user = {
       email,
       password,
     };
 
     const { message, token, userId } = await AuthApi.login(user);
-
     const expiryDate = new Date(Date.now() + 60 * 60 * 1000);
-
     console.log("Expiry Date", expiryDate);
     console.log(message);
     localStorage.setItem("userId", userId);

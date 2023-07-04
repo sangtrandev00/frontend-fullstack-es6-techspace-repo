@@ -500,7 +500,6 @@ const updateOrder = async () => {
     }
 
     await updateOrder();
-    // }
   });
 
   await updateOrder();

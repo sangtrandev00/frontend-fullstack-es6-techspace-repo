@@ -50,64 +50,6 @@ const renderCart = async () => {
   textContent("summaryTotal", `$${totalPrice.toFixed(2)}`);
   textContent("totalCost", `$${totalPrice.toFixed(2)}`);
 
-  //   if (!viewCartEl) return;
-  //   let sum = 0;
-  //   cartList.forEach(async (cartItem) => {
-  //     const { prodId, qty } = cartItem;
-  //     const {
-  //       product: { oldPrice, discount, name, thumbnail, categoryId },
-  //     } = await ProductsApi.getById(prodId);
-
-  //     const {
-  //       category: { name: cateName },
-  //     } = await CategoriesApi.getById(categoryId);
-
-  //     // console.log("qty: ", qty);
-  //     // console.log("id: ", prodId);
-  //     // console.log("oldPrice: ", oldPrice);
-  //     // console.log("discount: ", discount);
-  //     // console.log("name: ", name);
-  //     // console.log("thumbnail: ", thumbnail);
-  //     const price = oldPrice * (1 - discount / 100);
-  //     sum += qty * price;
-  //     console.log("sum: ", sum);
-  //     const totalItem = price * qty;
-  //     const cartItemHtml = `
-  //     <div class="flex items-center hover:bg-gray-100 -mx-8 px-6 py-3">
-  //         <div class="flex w-2/5">
-  //             <div class="w-20">
-  //                 <img class="h-24"
-  //                     src="${BACKEND_URL}/${thumbnail}" alt="${name}">
-  //             </div>
-  //             <div class="flex flex-col justify-between ml-4 flex-grow">
-  //                 <span class="font-bold text-sm">${name}</span>
-  //                 <span class="text-red-500 text-xs">${cateName}</span>
-  //                 <a href="#"
-  //                     class="font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</a>
-  //             </div>
-  //         </div>
-  //         <div class="flex justify-center w-1/5">
-  //             <svg class="fill-current text-gray-600 w-3 cursor-pointer" viewBox="0 0 448 512">
-  //                 <path
-  //                     d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
-  //             </svg>
-
-  //             <input class="mx-2 border text-center w-12" type="text" value="${qty}">
-
-  //             <svg class="fill-current text-gray-600 w-3 cursor-pointer" viewBox="0 0 448 512">
-  //                 <path
-  //                     d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
-  //             </svg>
-  //         </div>
-  //         <span class="text-center w-1/5 font-semibold text-sm">${price}</span>
-  //         <span class="text-center w-1/5 font-semibold text-sm">$${totalItem}</span>
-  //     </div>
-  //     `;
-  //     // Calculate sum here!!!;
-
-  //     viewCartEl.insertAdjacentHTML("beforeend", cartItemHtml);
-  //   });
-
   const continueShopEl = `
     <a  href="./shop.html" class="flex font-semibold text-indigo-600 text-sm my-5">
 

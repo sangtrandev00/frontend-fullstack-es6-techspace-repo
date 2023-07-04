@@ -71,24 +71,6 @@ export const listCartHandler = async (cartList, viewCartEl, callback) => {
 
     viewCartEl.insertAdjacentHTML("beforeend", cartItemHtml);
   }
-
-  // cartList.forEach(async (cartItem) => {
-  //   const { prodId, qty } = cartItem;
-  //   const {
-  //     product: { oldPrice, discount, name, thumbnail, categoryId },
-  //   } = await ProductsApi.getById(prodId);
-
-  //   const {
-  //     category: { name: cateName },
-  //   } = await CategoriesApi.getById(categoryId);
-
-  //   const price = oldPrice * (1 - discount / 100);
-  //   sum += qty * price;
-  //   const totalItem = price * qty;
-  //   const cartItemHtml = callback(prodId, name, thumbnail, cateName, qty, price, totalItem);
-
-  //   viewCartEl.insertAdjacentHTML("beforeend", cartItemHtml);
-  // });
 };
 
 export const calcTotalAndLengthOfCart = (cartList) => {
@@ -155,9 +137,12 @@ export const addToCart = async (productId, qtyValue) => {
     cartList: currCartList,
     totalPrice: totalPrice,
   };
+
   console.log(updatedCart);
+
   // Up date UI here ???
   const { cartLength } = calcTotalAndLengthOfCart(currCartList);
+
   textContent("numberCartItems", cartLength);
 
   localStorage.setItem("cart", JSON.stringify(updatedCart));
