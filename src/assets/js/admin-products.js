@@ -56,7 +56,7 @@ const renderProductsList = async () => {
         shortDesc,
         fullDesc,
         stockQty,
-        categoryId,
+        categoryId: category,
         discount,
       } = product;
       let imageUrl;
@@ -72,7 +72,7 @@ const renderProductsList = async () => {
         _id,
         name,
         imageHtml,
-        categoryId,
+        category.name,
         oldPrice,
         discount,
         0,

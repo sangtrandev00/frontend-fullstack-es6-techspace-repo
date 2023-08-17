@@ -65,7 +65,15 @@ const renderProducts = async (params) => {
 
     const mainPrice = oldPrice * discount;
 
-    const imageUrl = thumbnail.startsWith("http") ? thumbnail : `${BACKEND_URL}/${thumbnail}`;
+    console.log("thumbnail: ", thumbnail);
+
+    let imageUrl = "";
+
+    if (thumbnail) {
+      imageUrl = thumbnail.startsWith("http") ? thumbnail : `${BACKEND_URL}/${thumbnail}`;
+    } else {
+      imageUrl = "https://placehold.co/372x372";
+    }
 
     const cardProductHtml = `
       <div data-id=${_id} class="product-item relative mb-10">
@@ -83,8 +91,7 @@ const renderProducts = async (params) => {
               <button
                   class="add-to-cart dark:bg-gray-800 dark:text-gray-300 font-medium text-base leading-4 text-gray-800 bg-white py-3 w-full">Add to cart</button>
               <button
-                  class="bg-transparent font-medium text-base leading-4 border-2 border-white py-3 w-full mt-2 text-white">Quick
-                  View</button>
+                  class="bg-transparent font-medium text-base leading-4 border-2 border-white py-3 w-full mt-2 text-white quick-view"><a href="#" className="quick-view">Quick View</a></button>
           </div>
       </div>
       <p class="font-normal dark:text-white text-xl leading-5 text-gray-800 md:mt-6 mt-4">${name}</p>
@@ -144,6 +151,11 @@ const moveToDetail = async () => {
 
       updateViews(id);
 
+      location.href = `./detail-product.html?id=${id}`;
+    }
+
+    if (e.target && e.target.classList.contains("quick-view")) {
+      const id = e.target.closest(".product-item").dataset.id;
       location.href = `./detail-product.html?id=${id}`;
     }
   });
